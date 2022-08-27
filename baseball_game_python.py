@@ -13,15 +13,21 @@ while len(number) < 3:
         number.append(temp)
 
 while True:
+
     if strike >= 3:
         print("YOU WON!")
+        print(f"ANSWER : {number}")
+        print("----------------------")
         break
 
-    print(number)
+    # print(number)
     strike = 0
+    ball = 0
     paul = True
     if count >= 10:
         print("GAME OVER")
+        print(f"ANSWER : {number}")
+        print("----------------------")
         break
 
     try:
@@ -40,7 +46,6 @@ while True:
         print("EX : 1 3 9")
         print("----------------------")
         continue
-        
     print("----------------------")
     for index, value in enumerate(choice_number):
         if value in number:
@@ -60,4 +65,3 @@ while True:
     print(f"REMAIN COINS : {10 - count}")
     print(f"STRIKE : {strike} / BALL : {ball} / FOUL : {foul}")
     print("----------------------")
-
